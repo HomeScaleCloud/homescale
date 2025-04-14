@@ -12,6 +12,10 @@ terraform {
       source  = "tailscale/tailscale"
       version = "0.19.0"
     }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "3.0"
+    }
   }
 }
 
@@ -29,4 +33,8 @@ provider "tailscale" {
   tailnet             = var.tailscale_tailnet
   oauth_client_id     = var.tailscale_oauth_client_id
   oauth_client_secret = var.tailscale_oauth_client_secret
+}
+
+provider "azurerm" {
+  features {}
 }

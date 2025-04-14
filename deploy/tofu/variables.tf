@@ -50,3 +50,10 @@ variable "tailscale_oauth_client_secret" {
   type        = string
   sensitive   = true
 }
+
+variable "lon2_lab_vm_admin_password" {
+  description = "Windows admin password for lon2-lab VMs"
+  type        = string
+  sensitive   = true
+}
+

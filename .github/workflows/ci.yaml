@@ -73,6 +73,7 @@ jobs:
           TF_VAR_tailscale_tailnet: op://common/tailscale/tailnet
           TF_VAR_tailscale_oauth_client_id: op://github-actions/tailscale/oauth-client-id
           TF_VAR_tailscale_oauth_client_secret: op://github-actions/tailscale/oauth-client-secret #pragma: allowlist secret
+          TF_VAR_lon2_lab_vm_admin_password: op://github-actions/lon2-lab-vm/admin-password
       - name: Initialize
         id: init
         run: tofu init
