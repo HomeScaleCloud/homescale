@@ -34,13 +34,13 @@ check_op_logged_in() {
 }
 
 cluster_standup () {
-    kubectl create ns argocd
+    # kubectl create ns argocd
 
     if ! kubectl apply -n argocd -k "apps/argocd/overlays/$CLUSTER_NAME/manifests"; then
         echo "⚠️OnePasswordItem CRD not installed yet—continuing anyway."
     fi
 
-    kubectl apply -n argocd -f "clusters/$CLUSTER_NAME"
+    kubectl apply -n argocd -k "clusters/$CLUSTER_NAME"
 
     check_op_logged_in
 
