@@ -1,0 +1,15 @@
+- name: Provision metal nodes
+  hosts: metal
+  become: true
+  roles:
+    - metal
+    - tailscale
+    - k8s
+
+# - name: Provision cloud nodes
+#   hosts: cloud
+#   become: true
+#   roles:
+#     - cloud
+#     - tailscale
+#     - k8s

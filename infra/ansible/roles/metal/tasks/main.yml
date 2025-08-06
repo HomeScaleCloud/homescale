@@ -1,0 +1,4 @@
+- name: Metal-specific tasks
+  when: "'bmc_ip' in hostvars[inventory_hostname]"
+  debug:
+    msg: "Running metal role for {{ inventory_hostname }} with BMC IP {{ hostvars[inventory_hostname]['bmc_ip'] }}"

@@ -1,0 +1,3 @@
+- name: Install RKE2
+  debug:
+    msg: "Installing RKE2 version {{ rke2_version }} with token {{ rke2_token }}"

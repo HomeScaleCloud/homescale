@@ -1,0 +1,2 @@
+tailscale_auth_key: "{{ lookup('env', 'TS_AUTHKEY_BOA1') }}"
+k8s_token: "{{ lookup('env', 'K8S_TOKEN_BOA1') }}"

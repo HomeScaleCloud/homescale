@@ -1,0 +1,3 @@
+- name: Install Tailscale
+  debug:
+    msg: "Installing Tailscale version {{ tailscale_version }} with key {{ tailscale_auth_key }}"
